@@ -45,3 +45,57 @@ fread(file = "C:/Users/Richard/Documents/Data Science/GDAT515/Jstanfield-Assignm
 
 str(dis)
 ```
+
+```{r time series of Disney open}
+dis %>%
+  select(Date, Open) -> dis.data
+
+as.Date(dis.data$Date, "%m/%d/%Y") -> dis.data$Date
+
+str(dis.data)
+```
+
+#Plotly
+
+```{r}
+
+plot_ly(data = dis.data, x = ~Date, y = ~Open, type = "scatter")
+
+```
+
+```{r}
+
+plot_ly(data = dis.data, x = ~Date, y = ~Open, mode = "lines+markers") %>% 
+  add_trace(p = ., type = "scatter") %>% 
+  layout(xaxis = list(title = "Date"), 
+         yaxis = list(title = "Price"))
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
