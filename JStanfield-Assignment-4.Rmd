@@ -72,6 +72,8 @@ plot_ly(data = dis.data, x = ~Date, y = ~Open, mode = "lines+markers") %>%
 
 ```
 
+Looking at the highlighted points of Disney's recent major acquisitions (Pixar-2006, Marvel-2009, Lucasfilm-2012, and Fox-2019), we can see that each is followed by a notable climb in stock open price, some more dramatic than others. We can see a very strong and continuing climb following the purchase of Marvel.
+
 
 
 
